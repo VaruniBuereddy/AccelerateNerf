@@ -70,13 +70,11 @@ You can find the pre trained models for lego dataset inside results folder for e
     
 <img width="450" src="Images/depth_000.png"/>
 
-
-<div align="right">
     
 <img width="450" src="Images/rgb_000.png"/>
 
 </div>
-</div>
+
 
 ## Inference:
 
