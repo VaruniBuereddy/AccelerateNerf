@@ -15,7 +15,7 @@ The approach to digitizing real-world objects involves the application of Neural
 
 The primary objective of this project is to delve into the Neural Graphics Primitives (NGP) optimization technique and other strategies to facilitate real-time performance in the Neural Radiance Field (NeRF). We aim to comprehensively understand the impact of NGP and alternative optimization methods on the training and runtime efficiency of NeRF.
 
-
+<img width="350" src="Images/scene.png"/>
 
 ## Dataset
 
