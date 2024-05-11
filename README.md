@@ -68,13 +68,13 @@ You can find the pre trained models for lego dataset inside results folder for e
 
 <div align="left">
     
-<img width="500" src="Images/depth.png"/>
+<img width="500" src="Images/depth_000.png"/>
 
 </div>
 
 <div align="right">
     
-<img width="500" src="Images/lego_taichi.png"/>
+<img width="500" src="Images/rgb_000.png"/>
 
 </div>
 
