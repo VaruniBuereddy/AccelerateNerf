@@ -4,7 +4,7 @@
 
 ###  Real-Time High-Precision Rendering with Instant NGP and Comparative Analysis
 
-<img width="350" src="art/cartoon.jpg"/>
+<img width="350" src="Images/title.png"/>
 
 </div>
 
