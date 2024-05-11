@@ -1,0 +1,55 @@
+2024-05-02 20:04:10,446 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Configure stats pid to 2500597
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Loading settings from /home/vb2386/.config/wandb/settings
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Loading settings from /scratch/vb2386/Documents/torch-ngp/wandb/settings
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'project': 'ngp_sweep', 'entity': 'vb2386', 'root_dir': '/scratch/vb2386/Documents/torch-ngp', 'sweep_id': 'vizo4cbg', 'run_id': 'v9cp5kvq', 'sweep_param_path': '/scratch/vb2386/Documents/torch-ngp/wandb/sweep-vizo4cbg/config-v9cp5kvq.yaml'}
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'profile_ngp.py', 'program_abspath': '/scratch/vb2386/Documents/torch-ngp/profile_ngp.py', 'program': 'profile_ngp.py'}
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_init.py:_log_setup():521] Logging user logs to /scratch/vb2386/Documents/torch-ngp/wandb/run-20240502_200410-v9cp5kvq/logs/debug.log
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_init.py:_log_setup():522] Logging internal logs to /scratch/vb2386/Documents/torch-ngp/wandb/run-20240502_200410-v9cp5kvq/logs/debug-internal.log
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_init.py:init():561] calling init triggers
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_init.py:init():568] wandb.init called with sweep_config: {'lr': 0.001, 'max_ray_batch': 4096, 'num_rays': 2048}
+config: {}
+2024-05-02 20:04:10,447 INFO    Thread-4  :2500597 [wandb_init.py:init():611] starting backend
+2024-05-02 20:04:10,448 INFO    Thread-4  :2500597 [wandb_init.py:init():615] setting up manager
+2024-05-02 20:04:10,455 INFO    Thread-4  :2500597 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-02 20:04:10,456 INFO    Thread-4  :2500597 [wandb_init.py:init():623] backend started and connected
+2024-05-02 20:04:10,463 INFO    Thread-4  :2500597 [wandb_run.py:_config_callback():1347] config_cb None None {'lr': 0.001, 'max_ray_batch': 4096, 'num_rays': 2048}
+2024-05-02 20:04:10,465 INFO    Thread-4  :2500597 [wandb_init.py:init():715] updated telemetry
+2024-05-02 20:04:10,526 INFO    Thread-4  :2500597 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-05-02 20:04:10,690 INFO    Thread-4  :2500597 [wandb_run.py:_on_init():2357] communicating current version
+2024-05-02 20:04:10,724 INFO    Thread-4  :2500597 [wandb_run.py:_on_init():2366] got version response 
+2024-05-02 20:04:10,724 INFO    Thread-4  :2500597 [wandb_init.py:init():799] starting run threads in backend
+2024-05-02 20:04:11,321 ERROR   Thread-4  :2500597 [wandb_init.py:init():1209] error
+Traceback (most recent call last):
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1181, in init
+    run = wi.init()
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 841, in init
+    run._on_start()
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 2389, in _on_start
+    self._backend.interface.publish_python_packages(working_set())
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 295, in publish_python_packages
+    for pkg in working_set:
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/wandb/util.py", line 1878, in working_set
+    yield InstalledDistribution(key=d.metadata["Name"], version=d.version)
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/setuptools/_vendor/importlib_metadata/__init__.py", line 450, in version
+    return self.metadata['Version']
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/setuptools/_vendor/importlib_metadata/__init__.py", line 428, in metadata
+    self.read_text('METADATA')
+  File "/scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/setuptools/_vendor/importlib_metadata/__init__.py", line 762, in read_text
+    return self._path.joinpath(filename).read_text(encoding='utf-8')
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/pathlib.py", line 1232, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/pathlib.py", line 1218, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/pathlib.py", line 1074, in _opener
+    return self._accessor.open(self, flags, mode)
+Exception
+2024-05-02 20:04:11,365 INFO    Thread-4  :2500597 [wandb_run.py:_finish():2064] finishing run vb2386/ngp_sweep/v9cp5kvq
+2024-05-02 20:04:11,365 INFO    Thread-4  :2500597 [wandb_run.py:_atexit_cleanup():2304] got exitcode: 0
+2024-05-02 20:04:11,365 INFO    Thread-4  :2500597 [wandb_run.py:_restore():2287] restore
+2024-05-02 20:04:11,365 INFO    Thread-4  :2500597 [wandb_run.py:_restore():2293] restore done
+2024-05-02 20:04:13,474 INFO    Thread-4  :2500597 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-02 20:04:13,474 INFO    Thread-4  :2500597 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-02 20:04:13,481 INFO    Thread-4  :2500597 [wandb_run.py:_footer_sync_info():3895] logging synced files

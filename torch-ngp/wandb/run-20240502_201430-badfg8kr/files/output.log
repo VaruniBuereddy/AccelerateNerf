@@ -1,0 +1,183 @@
+Training Started!!!!!!!!!!
+Namespace(H=1080, O=True, W=1920, bg_radius=-1, bound=1.0, ckpt='latest', clip_text='', color_space='srgb', cuda_ray=True, density_thresh=10, dt_gamma=0.0, error_map=False, ff=False, fovy=50, fp16=True, gui=False, iters=10, lr=0.001, max_ray_batch=4096, max_spp=64, max_steps=1024, min_near=0.2, num_rays=2048, num_steps=512, offset=[0, 0, 0], patch_size=1, path='../nerf-pytorch/data/nerf_synthetic/lego', preload=True, radius=5, rand_pose=-1, scale=0.8, seed=0, tcnn=False, test=False, update_extra_interval=16, upsample_steps=0, workspace='trial_nerf')
+NeRFNetwork(
+  (encoder): GridEncoder: input_dim=3 num_levels=16 level_dim=2 resolution=16 -> 2048 per_level_scale=1.3819 params=(6119864, 2) gridtype=hash align_corners=False interpolation=linear
+  (sigma_net): ModuleList(
+    (0): Linear(in_features=32, out_features=64, bias=False)
+    (1): Linear(in_features=64, out_features=16, bias=False)
+  )
+  (encoder_dir): SHEncoder: input_dim=3 degree=4
+  (color_net): ModuleList(
+    (0): Linear(in_features=31, out_features=64, bias=False)
+    (1): Linear(in_features=64, out_features=64, bias=False)
+    (2): Linear(in_features=64, out_features=3, bias=False)
+  )
+)
+
+
+Loading train data:  97%|█████████▋| 97/100 [00:05<00:00, 17.42it/s]
+
+Loading train data: 100%|██████████| 100/100 [00:05<00:00, 19.10it/s]
+Loading model from: /scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+[INFO] Trainer: ngp | 2024-05-02_20-14-38 | cuda | fp16 | trial_nerf
+[INFO] #parameters: 12249072
+Loading val data: 100%|██████████| 100/100 [00:01<00:00, 62.29it/s]s]
+Loading val data:  97%|█████████▋| 97/100 [00:01<00:00, 60.16it/s]
+[mark untrained grid] 0 from 2097152
+==> Start Training Epoch 1, lr=0.001000 ...
+loss=0.0381 (0.0368), lr=0.000100: :  63% 63/100 [00:01<00:00, 46.43it/s]
+loss=0.0373 (0.0353), lr=0.000100: :  99% 99/100 [00:02<00:00, 54.95it/s]
+
+Loading test data:  88%|████████▊ | 176/200 [00:02<00:00, 56.63it/s]
+Loading test data: 100%|██████████| 200/200 [00:03<00:00, 55.29it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+loss=0.0481 (0.0485): : 100% 199/200 [02:28<00:00,  1.32it/s]
+PSNR = 13.237270
+LPIPS (alex) = 0.476800
+++> Evaluate epoch 1 Finished.
+loss=0.0480 (0.0485): : 100% 200/200 [02:28<00:00,  1.32it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100% 200/200 [02:20<00:00,  1.40it/s]
+==> Finished Test.
+==> Saving mesh to trial_nerf/meshes/ngp_1.ply
+==> Finished saving mesh.

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "profile_ngp.py", line 20, in run
+    parser = config_parser()
+NameError: name 'config_parser' is not defined
+Training Started!!!!!!!!!!

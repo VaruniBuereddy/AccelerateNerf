@@ -1,0 +1,8 @@
+wandb_version: 1
+
+lr:
+  value: 0.01
+max_ray_batch:
+  value: 2048
+num_rays:
+  value: 2048

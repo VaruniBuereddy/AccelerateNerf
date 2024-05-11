@@ -1,0 +1,57 @@
+Training Started!!!!!!!!!!
+Namespace(H=1080, O=True, W=1920, bg_radius=-1, bound=1.0, ckpt='latest', clip_text='', color_space='srgb', cuda_ray=True, density_thresh=10, dt_gamma=0.0, error_map=False, ff=False, fovy=50, fp16=True, gui=False, iters=10, lr=0.0005, max_ray_batch=4096, max_spp=64, max_steps=1024, min_near=0.2, num_rays=4096, num_steps=512, offset=[0, 0, 0], patch_size=1, path='../nerf-pytorch/data/nerf_synthetic/lego', preload=True, radius=5, rand_pose=-1, scale=0.8, seed=0, tcnn=False, test=False, update_extra_interval=16, upsample_steps=0, workspace='trial_nerf')
+NeRFNetwork(
+  (encoder): GridEncoder: input_dim=3 num_levels=16 level_dim=2 resolution=16 -> 2048 per_level_scale=1.3819 params=(6119864, 2) gridtype=hash align_corners=False interpolation=linear
+  (sigma_net): ModuleList(
+    (0): Linear(in_features=32, out_features=64, bias=False)
+    (1): Linear(in_features=64, out_features=16, bias=False)
+  )
+  (encoder_dir): SHEncoder: input_dim=3 degree=4
+  (color_net): ModuleList(
+    (0): Linear(in_features=31, out_features=64, bias=False)
+    (1): Linear(in_features=64, out_features=64, bias=False)
+    (2): Linear(in_features=64, out_features=3, bias=False)
+  )
+)
+Loading train data:  98%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▍  | 98/100 [00:01<00:00, 64.27it/s]
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+[1m[[22mINFO[1m][22m Trainer: ngp | [1m2024[22m-[1m05[22m-02_19-[1m37[22m-[1m28[22m | cuda | fp16 | trial_nerf
+[1m[[22mINFO[1m][22m #parameters: [1m12249072
+[1m[[22mINFO[1m][22m Loading latest checkpoint [33m...
+[1m[[22mINFO[1m][22m Latest checkpoint is trial_nerf/checkpoints/ngp_ep0067.pth
+[1m[[22mINFO[1m][22m loaded model.
+[1m[[22mINFO[1m][22m load at epoch [1m67[22m, global step [1m6700
+[1m[[22mINFO[1m][22m loaded optimizer.
+[1m[[22mINFO[1m][22m loaded scheduler.
+[1m[[22mINFO[1m][22m loaded scaler.
+Loading val data:  77%|████████████████████████████████████████████████████████████████████████████████████████████████████▊                              | 77/100 [00:01<00:00, 61.59it/s]
+Loading val data:  97%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████    | 97/100 [00:01<00:00, 59.77it/s]
+
+Loading test data:  88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████▏              | 177/200 [00:02<00:00, 58.91it/s]
+Loading test data:  98%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊   | 195/200 [00:03<00:00, 56.96it/s]
+
+
+
+
+
+
+
+
+
+
+loss=0.0005 (0.0007): :  98% 195/200 [00:20<00:00,  9.46it/s]
+[34mPSNR = [39m[1m31.883162
+[34mLPIPS [39m[1m([34m[22malex[39m[1m)[34m[22m = [39m[1m0.023611
+++> Evaluate epoch [1m67[22m Finished.
+loss=0.0005 (0.0007): : 100% 200/200 [00:20<00:00,  9.44it/s]
+
+
+
+
+
+
+100% 200/200 [00:12<00:00, 15.21it/s]
+==> Finished Test.
+==> Saving mesh to trial_nerf/meshes/ngp_67.ply
+==> Finished saving mesh.

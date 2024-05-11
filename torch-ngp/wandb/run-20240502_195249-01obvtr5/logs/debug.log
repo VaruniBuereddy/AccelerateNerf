@@ -1,0 +1,32 @@
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Configure stats pid to 2498128
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Loading settings from /home/vb2386/.config/wandb/settings
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Loading settings from /scratch/vb2386/Documents/torch-ngp/wandb/settings
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'project': 'ngp_sweep', 'entity': 'vb2386', 'root_dir': '/scratch/vb2386/Documents/torch-ngp', 'run_id': '01obvtr5', 'sweep_param_path': '/scratch/vb2386/Documents/torch-ngp/wandb/sweep-54fnwixl/config-01obvtr5.yaml', 'sweep_id': '54fnwixl'}
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'profile_ngp.py', 'program_abspath': '/scratch/vb2386/Documents/torch-ngp/profile_ngp.py', 'program': 'profile_ngp.py'}
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-02 19:52:49,785 INFO    Thread-9  :2498128 [wandb_init.py:_log_setup():521] Logging user logs to /scratch/vb2386/Documents/torch-ngp/wandb/run-20240502_195249-01obvtr5/logs/debug.log
+2024-05-02 19:52:49,786 INFO    Thread-9  :2498128 [wandb_init.py:_log_setup():522] Logging internal logs to /scratch/vb2386/Documents/torch-ngp/wandb/run-20240502_195249-01obvtr5/logs/debug-internal.log
+2024-05-02 19:52:49,786 INFO    Thread-9  :2498128 [wandb_init.py:init():561] calling init triggers
+2024-05-02 19:52:49,786 INFO    Thread-9  :2498128 [wandb_init.py:init():568] wandb.init called with sweep_config: {'lr': 0.01, 'max_ray_batch': 2048, 'num_rays': 4096}
+config: {}
+2024-05-02 19:52:49,786 INFO    Thread-9  :2498128 [wandb_init.py:init():611] starting backend
+2024-05-02 19:52:49,786 INFO    Thread-9  :2498128 [wandb_init.py:init():615] setting up manager
+2024-05-02 19:52:49,793 INFO    Thread-9  :2498128 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-02 19:52:49,794 INFO    Thread-9  :2498128 [wandb_init.py:init():623] backend started and connected
+2024-05-02 19:52:49,802 INFO    Thread-9  :2498128 [wandb_run.py:_config_callback():1347] config_cb None None {'lr': 0.01, 'max_ray_batch': 2048, 'num_rays': 4096}
+2024-05-02 19:52:49,803 INFO    Thread-9  :2498128 [wandb_init.py:init():715] updated telemetry
+2024-05-02 19:52:49,998 INFO    Thread-9  :2498128 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-05-02 19:52:50,270 INFO    Thread-9  :2498128 [wandb_run.py:_on_init():2357] communicating current version
+2024-05-02 19:52:50,303 INFO    Thread-9  :2498128 [wandb_run.py:_on_init():2366] got version response 
+2024-05-02 19:52:50,303 INFO    Thread-9  :2498128 [wandb_init.py:init():799] starting run threads in backend
+2024-05-02 19:52:50,651 INFO    Thread-9  :2498128 [wandb_run.py:_console_start():2335] atexit reg
+2024-05-02 19:52:50,651 INFO    Thread-9  :2498128 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-05-02 19:52:50,651 INFO    Thread-9  :2498128 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-05-02 19:52:50,651 INFO    Thread-9  :2498128 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-05-02 19:52:50,652 INFO    Thread-9  :2498128 [wandb_init.py:init():842] run started, returning control to user process
+2024-05-02 19:52:51,952 INFO    Thread-9  :2498128 [wandb_run.py:_finish():2064] finishing run vb2386/ngp_sweep/01obvtr5
+2024-05-02 19:52:51,956 INFO    Thread-9  :2498128 [wandb_run.py:_atexit_cleanup():2304] got exitcode: 1
+2024-05-02 19:52:51,956 INFO    Thread-9  :2498128 [wandb_run.py:_restore():2287] restore
+2024-05-02 19:52:51,956 INFO    Thread-9  :2498128 [wandb_run.py:_restore():2293] restore done

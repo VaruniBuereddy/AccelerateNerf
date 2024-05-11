@@ -1,0 +1,69 @@
+Training Started!!!!!!!!!!
+Namespace(H=1080, O=True, W=1920, bg_radius=-1, bound=1.0, ckpt='latest', clip_text='', color_space='srgb', cuda_ray=True, density_thresh=10, dt_gamma=0.0, error_map=False, ff=False, fovy=50, fp16=True, gui=False, iters=10, lr=0.0005, max_ray_batch=2048, max_spp=64, max_steps=1024, min_near=0.2, num_rays=2048, num_steps=512, offset=[0, 0, 0], patch_size=1, path='../nerf-pytorch/data/nerf_synthetic/lego', preload=True, radius=5, rand_pose=-1, scale=0.8, seed=0, tcnn=False, test=False, update_extra_interval=16, upsample_steps=0, workspace='trial_nerf')
+NeRFNetwork(
+  (encoder): GridEncoder: input_dim=3 num_levels=16 level_dim=2 resolution=16 -> 2048 per_level_scale=1.3819 params=(6119864, 2) gridtype=hash align_corners=False interpolation=linear
+  (sigma_net): ModuleList(
+    (0): Linear(in_features=32, out_features=64, bias=False)
+    (1): Linear(in_features=64, out_features=16, bias=False)
+  )
+  (encoder_dir): SHEncoder: input_dim=3 degree=4
+  (color_net): ModuleList(
+    (0): Linear(in_features=31, out_features=64, bias=False)
+    (1): Linear(in_features=64, out_features=64, bias=False)
+    (2): Linear(in_features=64, out_features=3, bias=False)
+  )
+)
+/home/vb2386/.local/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning:
+                               !! WARNING !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                              !! WARNING !!
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+/home/vb2386/.local/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning:
+                               !! WARNING !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                              !! WARNING !!
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+/home/vb2386/.local/lib/python3.8/site-packages/torch/utils/cpp_extension.py:295: UserWarning:
+                               !! WARNING !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Your compiler (c++) is not compatible with the compiler Pytorch was
+built with for this platform, which is g++ on linux. Please
+use g++ to to compile your extension. Alternatively, you may
+compile PyTorch from source using c++, and then you can also use
+c++ to compile your extension.
+See https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md for help
+with compiling PyTorch from source.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                              !! WARNING !!
+  warnings.warn(WRONG_COMPILER_WARNING.format(
+
+Loading train data: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:01<00:00, 54.91it/s]
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Exception ignored in: <function Trainer.__del__ at 0x15387b295af0>
+Traceback (most recent call last):
+  File "/scratch/vb2386/Documents/torch-ngp/nerf/utils.py", line 455, in __del__
+    if self.log_ptr:
+AttributeError: 'Trainer' object has no attribute 'log_ptr'
+Traceback (most recent call last):
+  File "profile_ngp.py", line 27, in run
+    train_profile(opt)
+  File "profile_ngp.py", line 106, in train_profile
+    trainer = Trainer('ngp', opt, model, device=device, workspace=opt.workspace, optimizer=optimizer, criterion=criterion, ema_decay=0.95, fp16=opt.fp16, lr_scheduler=scheduler, scheduler_update_every_step=True, metrics=metrics, use_checkpoint=opt.ckpt, eval_interval=50)
+TypeError: __init__() missing 1 required positional argument: 'use_wandb'
+Loading model from: /scratch/vb2386/Documents/torch-ngp/venv/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
