@@ -54,7 +54,7 @@ To quantify the computational efficiency and memory usage of Nerf-pytorch and In
 
 <div align="center">
     
-<img width="350" src="Images/tensorboard.png"/>
+<img width="1000" src="Images/tensorboard.png"/>
 
 </div>
 
