@@ -21,27 +21,36 @@ The primary objective of this project is to delve into the Neural Graphics Primi
 
 We have used nerf_synthetic and LLff dataset which can be downloaded from [here](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1) .
 
-## Project milestones
 
+## Project milestones and Results
 
 ### Dataset Preparation:
 
 We preprocessed the Nerf-Synthetic and LLFF datasets, ensuring compatibility with both Nerf-pytorch and Instant NGP frameworks. These datasets contain diverse scenes with varying levels of complexity, allowing us to evaluate the models' performance across different scenarios.
 
+```bash
+python ./torch-ngp/scripts/llff2nerf.py
+```
+You use this to convert the intrinsic data format (used by LLFF dataset) to JSON format used by most nerf models (also nerf_synthetic format).
 ### Training and Evaluation:
 We trained both Nerf-pytorch and Instant NGP on the prepared datasets, employing standard training protocols and hyperparameters. Subsequently, we conducted thorough evaluations, including visualizations, performance profiling, and result interpretation.
+
+The WandB page for NeRF is available [here](https://wandb.ai/vb2386/Sweep_Nerf?nw=nwuservb2386)
+The WandB page for NGP is available [here](https://wandb.ai/vb2386/Sweep_NGP?nw=nwuservb2386)
 
 ### Visualizations:
 We generated qualitative visualizations of the reconstructed scenes from both models to assess the quality of the reconstructions. Visual inspection allows for a comparative analysis of the models' ability to capture fine details and reproduce scene geometry accurately.
 
+Dataset | NeRF | NGP
+:-------------------------:|:-------------------------:|:-------------------------:
+`LEGO (nerf_synthetic)` | ![](./Images/lego_nerf.png) |![](./Images/lego_ngp.png)
+`Fern (LLFF)` | ![](./Images/fern_nerf.png) |  ![](./Images/fern_ngp.png)
+
 ### Performance Profiling:
 To quantify the computational efficiency and memory usage of Nerf-pytorch and Instant NGP, we conducted performance profiling experiments. These experiments provide insights into the models' scalability and resource requirements, crucial for practical deployment scenarios.
+<img width="350" src="Images/tensorboard.png"/>
 
-### Interpretation of Results:
-Based on the evaluation results, we analyzed the strengths and weaknesses of Nerf-pytorch and Instant NGP. We considered factors such as reconstruction quality, computational efficiency, and memory footprint to determine the suitability of each model for different application scenarios.
 
-### Inference:
-We performed inference experiments using both models to assess their real-time performance and scalability. This evaluation is essential for applications requiring interactive rendering or deployment on resource-constrained devices.
 
 ### Lego trained weights
 
@@ -49,19 +58,11 @@ You can find the pre trained models for lego dataset inside results folder for e
 **Note**: For the scope of the project, only relevant hyperparameters are selected for sweeping.
 
 
-## Results
-
-Prompt (Image Description) | Stable Diffusion | Stable Diffusion (Fine-Tuned) | Original
-:-------------------------:|:------:|:-------------------:|:-------------------------:
-`A man is sitting in an office on his computer. He is speaking with a rat man who is at his computer.` | ![](./art/stable_diffusion_1.png) | ![](art/finetuned_1.png) |  ![](./art/original_1.png)
-`Two soldiers are on horseback in a field. A bunch of businessman are trailing along behind them.` | ![](art/stable_diffusion_3.png) | ![](art/finetuned_3.png) | ![](art/original_3.png)
-`A businessman is walking down the street. Next to him is another man, also with a briefcase` | ![](art/stable_diffusion_2.png) | ![](art/finetuned_2.png) | ![](art/original_2.png)
+### Additional Results
 
 
-Prompt (Image Captions) | Stable Diffusion | Stable Diffusion (Fine-Tuned) | Original
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-`Evolution can be so tacky.` | ![](./art/stable_diffusion_4.png) |![](./art/finetuned_4.png) | ![](./art/original_4.png)
-`Wait, this is yesterday's` | ![](./art/stable_diffusion_5.png) |  ![](./art/finetuned_5.png) |  ![](./art/original_5.png)
+
+## Inference:
 
 
 ## Project Structure
@@ -101,16 +102,15 @@ Prompt (Image Captions) | Stable Diffusion | Stable Diffusion (Fine-Tuned) | Ori
     python profile_ngp -- 
     ```
     ### NeRf
-1. Setup and activate the virtual envirnoment
+1. Run he training with profiling
 ```
-
-```
-2. Run he training with profiling
-```
+python profile_nerf -- 
 ```
  ### Taichi
 Alternatively, the taichi model can also be trianed  by
-scheduling a batch job on an HPC cluster using `sbatch scripts/taichi_NGP.sbatch`.
+scheduling a batch job on an HPC cluster using `sbatch scripts/taichi_NGP.sh`.
+
+**Note: This is recommended to be done on hpc as it is GPU extensive and similar to running CUDA kernels.**
 
 ## References
 ```
