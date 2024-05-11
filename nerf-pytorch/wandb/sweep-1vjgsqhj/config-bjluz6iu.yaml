@@ -1,0 +1,8 @@
+wandb_version: 1
+
+batch_size:
+  value: 4096
+chunk:
+  value: 16384
+lrate:
+  value: 0.001

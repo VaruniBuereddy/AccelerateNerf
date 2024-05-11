@@ -1,0 +1,96 @@
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Configure stats pid to 707638
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Loading settings from /home/vb2386/.config/wandb/settings
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Loading settings from /scratch/vb2386/Documents/nerf-pytorch/wandb/settings
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'project': 'nerf_sweep', 'entity': 'vb2386', 'root_dir': '/scratch/vb2386/Documents/nerf-pytorch', 'run_id': 'si3gbhyg', 'sweep_param_path': '/scratch/vb2386/Documents/nerf-pytorch/wandb/sweep-uceyjq7z/config-si3gbhyg.yaml', 'sweep_id': 'uceyjq7z'}
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'profile_nerf.py', 'program_abspath': '/scratch/vb2386/Documents/nerf-pytorch/profile_nerf.py', 'program': 'profile_nerf.py'}
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_init.py:_log_setup():521] Logging user logs to /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240502_061923-si3gbhyg/logs/debug.log
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_init.py:_log_setup():522] Logging internal logs to /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240502_061923-si3gbhyg/logs/debug-internal.log
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_init.py:init():561] calling init triggers
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_init.py:init():568] wandb.init called with sweep_config: {'batch_size': 4096, 'chunk': 32768, 'lrate': 0.0005}
+config: {}
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_init.py:init():611] starting backend
+2024-05-02 06:19:23,951 INFO    Thread-13 :707638 [wandb_init.py:init():615] setting up manager
+2024-05-02 06:19:23,955 INFO    Thread-13 :707638 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-02 06:19:23,956 INFO    Thread-13 :707638 [wandb_init.py:init():623] backend started and connected
+2024-05-02 06:19:23,963 INFO    Thread-13 :707638 [wandb_run.py:_config_callback():1347] config_cb None None {'batch_size': 4096, 'chunk': 32768, 'lrate': 0.0005}
+2024-05-02 06:19:23,965 INFO    Thread-13 :707638 [wandb_init.py:init():715] updated telemetry
+2024-05-02 06:19:24,160 INFO    Thread-13 :707638 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-05-02 06:19:24,354 INFO    Thread-13 :707638 [wandb_run.py:_on_init():2357] communicating current version
+2024-05-02 06:19:24,384 INFO    Thread-13 :707638 [wandb_run.py:_on_init():2366] got version response 
+2024-05-02 06:19:24,384 INFO    Thread-13 :707638 [wandb_init.py:init():799] starting run threads in backend
+2024-05-02 06:19:25,238 INFO    Thread-13 :707638 [wandb_run.py:_console_start():2335] atexit reg
+2024-05-02 06:19:25,238 INFO    Thread-13 :707638 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-05-02 06:19:25,238 INFO    Thread-13 :707638 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-05-02 06:19:25,238 INFO    Thread-13 :707638 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-05-02 06:19:25,239 INFO    Thread-13 :707638 [wandb_init.py:init():842] run started, returning control to user process
+2024-05-02 07:22:38,732 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 502 response executing GraphQL.
+2024-05-02 07:22:38,735 ERROR   Thread-3  :707638 [internal_api.py:execute():374] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2024-05-02 08:05:47,412 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 502 response executing GraphQL.
+2024-05-02 08:05:47,412 ERROR   Thread-3  :707638 [internal_api.py:execute():374] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2024-05-02 08:07:09,312 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 502 response executing GraphQL.
+2024-05-02 08:07:09,312 ERROR   Thread-3  :707638 [internal_api.py:execute():374] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>502 Server Error</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Server Error</h1>
+<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>
+<h2></h2>
+</body></html>
+
+2024-05-02 08:08:05,472 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 500 response executing GraphQL.
+2024-05-02 08:08:05,472 ERROR   Thread-3  :707638 [internal_api.py:execute():374] {"error":"context deadline exceeded"}
+2024-05-02 08:09:02,760 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 500 response executing GraphQL.
+2024-05-02 08:09:02,760 ERROR   Thread-3  :707638 [internal_api.py:execute():374] {"error":"context deadline exceeded"}
+2024-05-02 08:09:02,760 INFO    Thread-3  :707638 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/gql_request.py", line 59, in execute
+    request.raise_for_status()
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2024-05-02 08:10:02,257 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 500 response executing GraphQL.
+2024-05-02 08:10:02,258 ERROR   Thread-3  :707638 [internal_api.py:execute():374] {"error":"context deadline exceeded"}
+2024-05-02 08:11:06,119 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 500 response executing GraphQL.
+2024-05-02 08:11:06,119 ERROR   Thread-3  :707638 [internal_api.py:execute():374] {"error":"context deadline exceeded"}
+2024-05-02 08:12:20,681 ERROR   Thread-3  :707638 [internal_api.py:execute():373] 500 response executing GraphQL.
+2024-05-02 08:12:20,681 ERROR   Thread-3  :707638 [internal_api.py:execute():374] {"error":"context deadline exceeded"}
+2024-05-02 08:18:18,103 INFO    Thread-13 :707638 [wandb_run.py:_finish():2064] finishing run vb2386/nerf_sweep/si3gbhyg
+2024-05-02 08:18:18,104 INFO    Thread-13 :707638 [wandb_run.py:_atexit_cleanup():2304] got exitcode: 0
+2024-05-02 08:18:18,104 INFO    Thread-13 :707638 [wandb_run.py:_restore():2287] restore
+2024-05-02 08:18:18,104 INFO    Thread-13 :707638 [wandb_run.py:_restore():2293] restore done
+2024-05-02 08:18:22,148 INFO    Thread-13 :707638 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-02 08:18:22,148 INFO    Thread-13 :707638 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-02 08:18:22,153 INFO    Thread-13 :707638 [wandb_run.py:_footer_sync_info():3895] logging synced files

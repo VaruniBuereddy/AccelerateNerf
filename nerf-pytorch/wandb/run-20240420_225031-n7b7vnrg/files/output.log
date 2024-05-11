@@ -1,0 +1,6 @@
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/__init__.py:696: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:451.)
+  _C._set_default_tensor_type(t)
+Traceback (most recent call last):
+  File "profile_nerf.py", line 953, in <module>
+    'values': [5e-4, e-3, e-2]
+NameError: name 'e' is not defined

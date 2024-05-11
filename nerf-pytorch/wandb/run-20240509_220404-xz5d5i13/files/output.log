@@ -1,0 +1,11 @@
+
+Training Started!!!!!!!!!!
+[34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
+Traceback (most recent call last):
+  File "profile_nerf.py", line 526, in run
+    train(args)
+  File "profile_nerf.py", line 564, in train
+    images, poses, render_poses, hwf, i_split = load_blender_data(args.datadir, args.half_res, args.testskip)
+  File "/scratch/vb2386/Documents/nerf-pytorch/load_blender.py", line 60, in load_blender_data
+    imgs = (np.array(imgs) / 255.).astype(np.float32) # keep all 4 channels (RGBA)
+Exception

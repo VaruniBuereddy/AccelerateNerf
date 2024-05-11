@@ -1,0 +1,291 @@
+{
+    "os": "Linux-5.14.0-284.40.1.el9_2.x86_64-x86_64-with-glibc2.10",
+    "python": "3.8.3",
+    "heartbeatAt": "2024-05-10T23:09:18.639443",
+    "startedAt": "2024-05-10T23:09:15.657633",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--config",
+        "configs/lego.txt"
+    ],
+    "state": "running",
+    "program": "profile_nerf.py",
+    "codePathLocal": "profile_nerf.py",
+    "codePath": "nerf-pytorch/profile_nerf.py",
+    "git": {
+        "remote": "https://github.com/VaruniBuereddy/AccelerateNerf.git",
+        "commit": null
+    },
+    "email": "buereddyvarunireddy@gmail.com",
+    "root": "/scratch/vb2386/Documents",
+    "host": "gr050.hpc.nyu.edu",
+    "username": "vb2386",
+    "executable": "/scratch/vb2386/Documents/nerf-pytorch/venv/bin/python",
+    "cpu_count": 24,
+    "cpu_count_logical": 48,
+    "cpu_freq": {
+        "current": 3501.8331041666665,
+        "min": 1200.0,
+        "max": 3900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3499.999,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.924,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.67,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.032,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.94,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3504.388,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3503.908,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3503.369,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.566,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.399,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.534,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.676,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.606,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3503.695,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3490.839,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.921,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.001,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.123,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.465,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3491.698,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.058,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.676,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.002,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3509.011,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.0,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.194,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.932,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.144,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.886,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3501.301,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3504.533,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.206,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.888,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.116,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3486.138,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.697,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3501.363,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3492.223,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.266,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.771,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3500.158,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3517.435,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3489.188,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3499.95,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3488.65,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3501.835,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3506.263,
+            "min": 1200.0,
+            "max": 3900.0
+        },
+        {
+            "current": 3502.435,
+            "min": 1200.0,
+            "max": 3900.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 78.08685302734375,
+            "used": 21.71469497680664
+        }
+    },
+    "gpu": "Quadro RTX 8000",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "Quadro RTX 8000",
+            "memory_total": 48318382080
+        }
+    ],
+    "memory": {
+        "total": 377.0627136230469
+    }
+}

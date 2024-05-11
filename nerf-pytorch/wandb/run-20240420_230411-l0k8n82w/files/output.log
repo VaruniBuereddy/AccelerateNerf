@@ -1,0 +1,68 @@
+{'method': 'random',
+ 'parameters': {'batch_size': {'values': [4096, 2048]},
+                'chunk': {'values': [32768, 16384]},
+                'lrate': {'values': [0.0005, 0.001, 0.01]}}}
+Create sweep with ID: wmczmftp
+Sweep URL: https://wandb.ai/vb2386/nerf_sweep/sweeps/wmczmftp
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/__init__.py:696: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:451.)
+  _C._set_default_tensor_type(t)
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.login() after wandb.init() has no effect.
+Traceback (most recent call last):
+  File "profile_nerf.py", line 968, in <module>
+    wandb.agent(sweep_id, run, count=5)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/wandb_agent.py", line 568, in agent
+    return pyagent(sweep_id, function, entity, project, count)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/agents/pyagent.py", line 358, in pyagent
+    agent.run()
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/agents/pyagent.py", line 329, in run
+    self._setup()
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/agents/pyagent.py", line 137, in _setup
+    self._register()
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/agents/pyagent.py", line 114, in _register
+    agent = self._api.register_agent(socket.gethostname(), sweep_id=self._sweep_id)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/apis/internal.py", line 150, in register_agent
+    return self.api.register_agent(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2938, in register_agent
+    response = self.gql(
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 341, in gql
+    ret = self._retry_gql(
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 369, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/gql_request.py", line 58, in execute
+    request = self.session.post(self.url, **post_args)
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/requests/sessions.py", line 578, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/requests/sessions.py", line 530, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/requests/sessions.py", line 643, in send
+    r = adapter.send(request, **kwargs)
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/urllib3/connectionpool.py", line 426, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    httplib_response = conn.getresponse()
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/http/client.py", line 264, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/socket.py", line 669, in readinto
+    return self._sock.recv_into(b)
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/share/apps/anaconda3/2020.07/lib/python3.8/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt

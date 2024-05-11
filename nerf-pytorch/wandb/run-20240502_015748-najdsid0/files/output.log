@@ -1,0 +1,52 @@
+
+Training STarted!!!!!!!!!!
+Loaded blender (138, 400, 400, 4) torch.Size([40, 4, 4]) [400, 400, 555.5555155968841] ./data/nerf_synthetic/lego
+Not ndc!
+args.render_only:True
+RENDER ONLY
+test poses shape torch.Size([40, 4, 4])
+0 8.20159912109375e-05
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+1 10.786060333251953
+2 10.672638893127441
+3 10.687617063522339
+4 10.695958852767944
+5 10.704034328460693
+6 10.705305576324463
+7 10.712308406829834
+[34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
+Traceback (most recent call last):
+  File "profile_nerf.py", line 552, in run
+    train(args)
+  File "profile_nerf.py", line 689, in train
+    rgbs, _ = render_path(render_poses, hwf, K, args.chunk, render_kwargs_test, gt_imgs=images, savedir=testsavedir, render_factor=args.render_factor)
+  File "profile_nerf.py", line 155, in render_path
+    rgb, disp, acc, _ = render(H, W, K, chunk=chunk, c2w=c2w[:3,:4], **render_kwargs)
+  File "profile_nerf.py", line 127, in render
+    all_ret = batchify_rays(rays, chunk, **kwargs)
+  File "profile_nerf.py", line 60, in batchify_rays
+    ret = render_rays(rays_flat[i:i+chunk], **kwargs)
+  File "profile_nerf.py", line 402, in render_rays
+    raw = network_query_fn(pts, viewdirs, run_fn)
+  File "profile_nerf.py", line 202, in <lambda>
+    network_query_fn = lambda inputs, viewdirs, network_fn : run_network(inputs, viewdirs, network_fn,
+  File "profile_nerf.py", line 50, in run_network
+    outputs_flat = batchify(fn, netchunk)(embedded)
+  File "profile_nerf.py", line 34, in ret
+    return torch.cat([fn(inputs[i:i+chunk]) for i in range(0, inputs.shape[0], chunk)], 0)
+  File "profile_nerf.py", line 34, in <listcomp>
+    return torch.cat([fn(inputs[i:i+chunk]) for i in range(0, inputs.shape[0], chunk)], 0)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/run_nerf_helpers.py", line 100, in forward
+    h = self.pts_linears[i](h)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+Exception

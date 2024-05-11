@@ -1,0 +1,38 @@
+2024-04-20 22:53:33,327 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-04-20 22:53:33,327 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Configure stats pid to 1854630
+2024-04-20 22:53:33,330 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Loading settings from /home/vb2386/.config/wandb/settings
+2024-04-20 22:53:33,330 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Loading settings from /scratch/vb2386/Documents/nerf-pytorch/wandb/settings
+2024-04-20 22:53:33,330 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'project': 'nerf_sweep', 'entity': 'vb2386', 'root_dir': '/scratch/vb2386/Documents/nerf-pytorch', 'sweep_id': 'xc87ye88', 'run_id': 'g04kgr45', 'sweep_param_path': '/scratch/vb2386/Documents/nerf-pytorch/wandb/sweep-xc87ye88/config-g04kgr45.yaml'}
+2024-04-20 22:53:33,330 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-04-20 22:53:33,330 INFO    Thread-5  :1854630 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'profile_nerf.py', 'program_abspath': '/scratch/vb2386/Documents/nerf-pytorch/profile_nerf.py', 'program': 'profile_nerf.py'}
+2024-04-20 22:53:33,330 INFO    Thread-5  :1854630 [wandb_init.py:_log_setup():521] Logging user logs to /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240420_225333-g04kgr45/logs/debug.log
+2024-04-20 22:53:33,331 INFO    Thread-5  :1854630 [wandb_init.py:_log_setup():522] Logging internal logs to /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240420_225333-g04kgr45/logs/debug-internal.log
+2024-04-20 22:53:33,331 INFO    Thread-5  :1854630 [wandb_init.py:init():561] calling init triggers
+2024-04-20 22:53:33,331 INFO    Thread-5  :1854630 [wandb_init.py:init():568] wandb.init called with sweep_config: {'batch_size': 2048, 'chunk': 16384, 'lrate': 0.0005}
+config: {}
+2024-04-20 22:53:33,331 INFO    Thread-5  :1854630 [wandb_init.py:init():606] wandb.init() called when a run is still active
+2024-04-20 22:53:33,418 ERROR   Thread-5  :1854630 [wandb_init.py:init():1209] error
+Traceback (most recent call last):
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 1181, in init
+    run = wi.init()
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 608, in init
+    tel.feature.init_return_run = True
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/telemetry.py", line 42, in __exit__
+    self._run._telemetry_callback(self._obj)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 763, in _telemetry_callback
+    self._telemetry_flush()
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/wandb_run.py", line 774, in _telemetry_flush
+    self._backend.interface._publish_telemetry(self._telemetry_obj)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/interface/interface_shared.py", line 101, in _publish_telemetry
+    self._publish(rec)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/interface/interface_sock.py", line 51, in _publish
+    self._sock_client.send_record_publish(record)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/sock_client.py", line 221, in send_record_publish
+    self.send_server_request(server_req)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/sock_client.py", line 155, in send_server_request
+    self._send_message(msg)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/sock_client.py", line 152, in _send_message
+    self._sendall_with_error_handle(header + data)
+  File "/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/wandb/sdk/lib/sock_client.py", line 130, in _sendall_with_error_handle
+    sent = self._sock.send(data)
+BrokenPipeError: [Errno 32] Broken pipe

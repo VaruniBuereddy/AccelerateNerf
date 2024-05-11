@@ -1,0 +1,41 @@
+Training STarted!!!!!!!!!!
+Loaded image data (378, 504, 3, 42) [378.         504.         421.41487125]
+Loaded ./data/nerf_llff_data/fortress 12.752075897929807 140.8233726873153
+recentered (3, 5)
+[[ 1.0000000e+00  8.8853841e-11  4.0031339e-10  7.8053706e-09]
+ [-8.8853841e-11  1.0000000e+00 -8.3621021e-09 -1.0643687e-08]
+ [-4.0031339e-10  8.3621021e-09  1.0000000e+00  4.6122643e-09]]
+Data:
+(42, 3, 5) (42, 378, 504, 3) (42, 2)
+HOLDOUT view is 21
+Loaded llff (42, 378, 504, 3) (120, 3, 5) [378.     504.     421.4149] ./data/nerf_llff_data/fortress
+Auto LLFF holdout, 8
+DEFINING BOUNDS
+NEAR FAR 0.0 1.0
+Found ckpts []
+get rays
+done, concats
+shuffle rays
+done
+Begin
+TRAIN views are [ 1  2  3  4  5  6  7  9 10 11 12 13 14 15 17 18 19 20 21 22 23 25 26 27
+ 28 29 30 31 33 34 35 36 37 38 39 41]
+TEST views are [ 0  8 16 24 32 40]
+VAL views are [ 0  8 16 24 32 40]
+fortress_test 5 [10.335359] 0.19131313 4
+iter time 0.11019
+test poses shape torch.Size([6, 3, 4])
+0 2.0503997802734375e-05
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+torch.Size([378, 504, 3]) torch.Size([378, 504])
+Traceback (most recent call last):
+  File "profile_nerf.py", line 552, in run
+    train(args)
+  File "profile_nerf.py", line 846, in train
+    render_path(torch.Tensor(poses[i_test]).to(device), hwf, K, args.chunk, render_kwargs_test, gt_imgs=images[i_test], savedir=testsavedir)
+  File "profile_nerf.py", line 168, in render_path
+    rgb8 = to8b(rgbs[-1])
+  File "/scratch/vb2386/Documents/nerf-pytorch/run_nerf_helpers.py", line 11, in <lambda>
+    to8b = lambda x: (255 * np.clip(x.cpu().detach().numpy(), 0, 1)).astype(np.uint8)
+AttributeError: 'numpy.ndarray' object has no attribute 'cpu'

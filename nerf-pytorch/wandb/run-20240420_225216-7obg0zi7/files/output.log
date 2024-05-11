@@ -1,0 +1,8 @@
+{'method': 'random',
+ 'parameters': {'batch_size': {'values': [4096, 2048]},
+                'chunk': {'values': [32768, 16384]},
+                'lrate': {'values': [-50, -9, -12]}}}
+Create sweep with ID: cxp9qcg4
+Sweep URL: https://wandb.ai/vb2386/nerf_sweep/sweeps/cxp9qcg4
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/__init__.py:696: UserWarning: torch.set_default_tensor_type() is deprecated as of PyTorch 2.1, please use torch.set_default_dtype() and torch.set_default_device() as alternatives. (Triggered internally at ../torch/csrc/tensor/python_tensor.cpp:451.)
+  _C._set_default_tensor_type(t)

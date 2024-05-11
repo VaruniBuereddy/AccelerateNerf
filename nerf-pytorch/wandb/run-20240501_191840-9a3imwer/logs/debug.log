@@ -1,0 +1,35 @@
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Configure stats pid to 1824860
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Loading settings from /home/vb2386/.config/wandb/settings
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Loading settings from /scratch/vb2386/Documents/nerf-pytorch/wandb/settings
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'project': 'nerf_sweep', 'entity': 'vb2386', 'root_dir': '/scratch/vb2386/Documents/nerf-pytorch', 'sweep_id': 'cgxvqcg9', 'run_id': '9a3imwer', 'sweep_param_path': '/scratch/vb2386/Documents/nerf-pytorch/wandb/sweep-cgxvqcg9/config-9a3imwer.yaml'}
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'profile_nerf.py', 'program_abspath': '/scratch/vb2386/Documents/nerf-pytorch/profile_nerf.py', 'program': 'profile_nerf.py'}
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_init.py:_log_setup():521] Logging user logs to /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240501_191840-9a3imwer/logs/debug.log
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_init.py:_log_setup():522] Logging internal logs to /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240501_191840-9a3imwer/logs/debug-internal.log
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_init.py:init():561] calling init triggers
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_init.py:init():568] wandb.init called with sweep_config: {'batch_size': 4096, 'chunk': 32768, 'lrate': 0.001}
+config: {}
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_init.py:init():611] starting backend
+2024-05-01 19:18:40,716 INFO    Thread-4  :1824860 [wandb_init.py:init():615] setting up manager
+2024-05-01 19:18:40,722 INFO    Thread-4  :1824860 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-01 19:18:40,724 INFO    Thread-4  :1824860 [wandb_init.py:init():623] backend started and connected
+2024-05-01 19:18:40,731 INFO    Thread-4  :1824860 [wandb_run.py:_config_callback():1347] config_cb None None {'batch_size': 4096, 'chunk': 32768, 'lrate': 0.001}
+2024-05-01 19:18:40,732 INFO    Thread-4  :1824860 [wandb_init.py:init():715] updated telemetry
+2024-05-01 19:18:40,761 INFO    Thread-4  :1824860 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-05-01 19:18:40,910 INFO    Thread-4  :1824860 [wandb_run.py:_on_init():2357] communicating current version
+2024-05-01 19:18:40,943 INFO    Thread-4  :1824860 [wandb_run.py:_on_init():2366] got version response 
+2024-05-01 19:18:40,944 INFO    Thread-4  :1824860 [wandb_init.py:init():799] starting run threads in backend
+2024-05-01 19:18:41,802 INFO    Thread-4  :1824860 [wandb_run.py:_console_start():2335] atexit reg
+2024-05-01 19:18:41,802 INFO    Thread-4  :1824860 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-05-01 19:18:41,802 INFO    Thread-4  :1824860 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-05-01 19:18:41,802 INFO    Thread-4  :1824860 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-05-01 19:18:41,803 INFO    Thread-4  :1824860 [wandb_init.py:init():842] run started, returning control to user process
+2024-05-01 19:30:54,819 INFO    Thread-4  :1824860 [wandb_run.py:_finish():2064] finishing run vb2386/nerf_sweep/9a3imwer
+2024-05-01 19:30:54,823 INFO    Thread-4  :1824860 [wandb_run.py:_atexit_cleanup():2304] got exitcode: 1
+2024-05-01 19:30:54,823 INFO    Thread-4  :1824860 [wandb_run.py:_restore():2287] restore
+2024-05-01 19:30:54,823 INFO    Thread-4  :1824860 [wandb_run.py:_restore():2293] restore done
+2024-05-01 19:31:00,785 INFO    Thread-4  :1824860 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-05-01 19:31:00,785 INFO    Thread-4  :1824860 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-05-01 19:31:00,790 INFO    Thread-4  :1824860 [wandb_run.py:_footer_sync_info():3895] logging synced files

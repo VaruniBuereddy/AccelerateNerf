@@ -1,0 +1,38 @@
+
+Training STarted!!!!!!!!!!
+Loaded blender (138, 400, 400, 4) torch.Size([40, 4, 4]) [400, 400, 555.5555155968841] ./data/nerf_synthetic/lego
+Not ndc!
+RENDER ONLY
+test poses shape torch.Size([40, 4, 4])
+0 7.748603820800781e-05
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+1 10.65546989440918
+2 10.551628828048706
+3 10.59414792060852
+4 10.635557651519775
+5 10.659377813339233
+6 10.688685178756714
+7 10.69872522354126
+8 10.708787202835083
+9 10.71759843826294
+10 10.737272262573242
+11 10.747732162475586
+12 10.755529165267944
+13 10.762059211730957
+[34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
+Traceback (most recent call last):
+  File "profile_nerf.py", line 552, in run
+    train(args)
+  File "profile_nerf.py", line 688, in train
+  File "profile_nerf.py", line 155, in render_path
+    rgb, disp, acc, _ = render(H, W, K, chunk=chunk, c2w=c2w[:3,:4], **render_kwargs)
+  File "profile_nerf.py", line 127, in render
+    all_ret = batchify_rays(rays, chunk, **kwargs)
+  File "profile_nerf.py", line 60, in batchify_rays
+    ret = render_rays(rays_flat[i:i+chunk], **kwargs)
+  File "profile_nerf.py", line 404, in render_rays
+    rgb_map, disp_map, acc_map, weights, depth_map = raw2outputs(raw, z_vals, rays_d, raw_noise_std, white_bkgd, pytest=pytest)
+  File "profile_nerf.py", line 279, in raw2outputs
+    dists = torch.cat([dists, torch.Tensor([1e10]).expand(dists[...,:1].shape)], -1)  # [N_rays, N_samples]
+Exception

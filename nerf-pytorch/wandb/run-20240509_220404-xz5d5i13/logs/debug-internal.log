@@ -1,0 +1,171 @@
+2024-05-09 22:04:06,207 INFO    StreamThr :1554229 [internal.py:wandb_internal():86] W&B internal server running at pid: 1554229, started at: 2024-05-09 22:04:06.206534
+2024-05-09 22:04:06,221 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: status
+2024-05-09 22:04:06,222 INFO    WriterThread:1554229 [datastore.py:open_for_write():87] open: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/run-xz5d5i13.wandb
+2024-05-09 22:04:06,223 DEBUG   SenderThread:1554229 [sender.py:send():379] send: header
+2024-05-09 22:04:06,223 DEBUG   SenderThread:1554229 [sender.py:send():379] send: run
+2024-05-09 22:04:06,402 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: check_version
+2024-05-09 22:04:06,403 INFO    SenderThread:1554229 [dir_watcher.py:__init__():211] watching files in: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files
+2024-05-09 22:04:06,403 INFO    SenderThread:1554229 [sender.py:_start_run_threads():1124] run started: xz5d5i13 with start time 1715306646.21086
+2024-05-09 22:04:06,404 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: check_version
+2024-05-09 22:04:06,448 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: run_start
+2024-05-09 22:04:06,467 DEBUG   HandlerThread:1554229 [system_info.py:__init__():26] System info init
+2024-05-09 22:04:06,467 DEBUG   HandlerThread:1554229 [system_info.py:__init__():41] System info init done
+2024-05-09 22:04:06,467 INFO    HandlerThread:1554229 [system_monitor.py:start():194] Starting system monitor
+2024-05-09 22:04:06,468 INFO    SystemMonitor:1554229 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-09 22:04:06,468 INFO    HandlerThread:1554229 [system_monitor.py:probe():214] Collecting system info
+2024-05-09 22:04:06,474 INFO    SystemMonitor:1554229 [interfaces.py:start():190] Started cpu monitoring
+2024-05-09 22:04:06,475 INFO    SystemMonitor:1554229 [interfaces.py:start():190] Started disk monitoring
+2024-05-09 22:04:06,479 DEBUG   HandlerThread:1554229 [system_info.py:probe():150] Probing system
+2024-05-09 22:04:06,484 INFO    SystemMonitor:1554229 [interfaces.py:start():190] Started gpu monitoring
+2024-05-09 22:04:06,495 DEBUG   HandlerThread:1554229 [system_info.py:_probe_git():135] Probing git
+2024-05-09 22:04:06,496 INFO    SystemMonitor:1554229 [interfaces.py:start():190] Started memory monitoring
+2024-05-09 22:04:06,500 INFO    SystemMonitor:1554229 [interfaces.py:start():190] Started network monitoring
+2024-05-09 22:04:06,502 DEBUG   HandlerThread:1554229 [system_info.py:_probe_git():143] Probing git done
+2024-05-09 22:04:06,503 DEBUG   HandlerThread:1554229 [system_info.py:probe():198] Probing system done
+2024-05-09 22:04:06,503 DEBUG   HandlerThread:1554229 [system_monitor.py:probe():223] {'os': 'Linux-5.14.0-284.40.1.el9_2.x86_64-x86_64-with-glibc2.10', 'python': '3.8.3', 'heartbeatAt': '2024-05-10T02:04:06.479425', 'startedAt': '2024-05-10T02:04:04.513891', 'docker': None, 'cuda': None, 'args': ('--config', 'configs/lego.txt'), 'state': 'running', 'program': 'profile_nerf.py', 'codePathLocal': 'profile_nerf.py', 'codePath': 'nerf-pytorch/profile_nerf.py', 'git': {'remote': 'https://github.com/VaruniBuereddy/AccelerateNerf.git', 'commit': None}, 'email': 'buereddyvarunireddy@gmail.com', 'root': '/scratch/vb2386/Documents', 'host': 'gr001.hpc.nyu.edu', 'username': 'vb2386', 'executable': '/scratch/vb2386/Documents/nerf-pytorch/venv/bin/python', 'cpu_count': 24, 'cpu_count_logical': 48, 'cpu_freq': {'current': 2928.354020833334, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3719.767, 'min': 0.0, 'max': 0.0}, {'current': 3360.156, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}, {'current': 2900.0, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 78.08685302734375, 'used': 21.966163635253906}}, 'gpu': 'Quadro RTX 8000', 'gpu_count': 1, 'gpu_devices': [{'name': 'Quadro RTX 8000', 'memory_total': 48318382080}], 'memory': {'total': 377.0627975463867}}
+2024-05-09 22:04:06,508 INFO    HandlerThread:1554229 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-09 22:04:06,508 INFO    HandlerThread:1554229 [system_monitor.py:probe():227] Publishing system info
+2024-05-09 22:04:06,509 INFO    HandlerThread:1554229 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-09 22:04:06,576 DEBUG   SenderThread:1554229 [sender.py:send():379] send: files
+2024-05-09 22:04:06,576 INFO    SenderThread:1554229 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-05-09 22:04:06,910 INFO    wandb-upload_0:1554229 [upload_job.py:push():131] Uploaded file /state/partition1/job-46334837/tmpqnx0pb28wandb/tsumm6yj-wandb-metadata.json
+2024-05-09 22:04:07,407 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_created():271] file/dir created: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/wandb-metadata.json
+2024-05-09 22:04:08,130 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: python_packages
+2024-05-09 22:04:08,130 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: python_packages
+2024-05-09 22:04:08,131 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-09 22:04:08,131 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: stop_status
+2024-05-09 22:04:08,135 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-09 22:04:08,214 DEBUG   SenderThread:1554229 [sender.py:send():379] send: telemetry
+2024-05-09 22:04:08,404 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_created():271] file/dir created: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/output.log
+2024-05-09 22:04:08,404 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_created():271] file/dir created: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/requirements.txt
+2024-05-09 22:04:10,405 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_modified():288] file/dir modified: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/output.log
+2024-05-09 22:04:12,215 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: status_report
+2024-05-09 22:04:15,451 DEBUG   SenderThread:1554229 [sender.py:send():379] send: telemetry
+2024-05-09 22:04:15,451 DEBUG   SenderThread:1554229 [sender.py:send():379] send: exit
+2024-05-09 22:04:15,451 INFO    SenderThread:1554229 [sender.py:send_exit():586] handling exit code: 1
+2024-05-09 22:04:15,452 INFO    SenderThread:1554229 [sender.py:send_exit():588] handling runtime: 9
+2024-05-09 22:04:15,454 INFO    SenderThread:1554229 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-09 22:04:15,454 INFO    SenderThread:1554229 [sender.py:send_exit():594] send defer
+2024-05-09 22:04:15,455 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,455 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-09 22:04:15,455 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,455 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-05-09 22:04:15,455 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 1
+2024-05-09 22:04:15,455 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,455 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-09 22:04:15,455 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,455 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-05-09 22:04:15,455 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 2
+2024-05-09 22:04:15,455 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,456 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-09 22:04:15,456 INFO    HandlerThread:1554229 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-09 22:04:15,456 DEBUG   SystemMonitor:1554229 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-09 22:04:15,456 DEBUG   SystemMonitor:1554229 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-09 22:04:15,456 DEBUG   SystemMonitor:1554229 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-09 22:04:15,464 INFO    HandlerThread:1554229 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-09 22:04:15,464 INFO    HandlerThread:1554229 [interfaces.py:finish():202] Joined disk monitor
+2024-05-09 22:04:15,512 INFO    HandlerThread:1554229 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-09 22:04:15,512 INFO    HandlerThread:1554229 [interfaces.py:finish():202] Joined memory monitor
+2024-05-09 22:04:15,512 INFO    HandlerThread:1554229 [interfaces.py:finish():202] Joined network monitor
+2024-05-09 22:04:15,513 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,513 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-05-09 22:04:15,513 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 3
+2024-05-09 22:04:15,513 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,513 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-09 22:04:15,513 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,513 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-05-09 22:04:15,513 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 4
+2024-05-09 22:04:15,513 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,513 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-09 22:04:15,513 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,513 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-05-09 22:04:15,513 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 5
+2024-05-09 22:04:15,513 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,513 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-09 22:04:15,513 DEBUG   SenderThread:1554229 [sender.py:send():379] send: summary
+2024-05-09 22:04:15,514 INFO    SenderThread:1554229 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-05-09 22:04:15,514 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,514 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-05-09 22:04:15,514 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 6
+2024-05-09 22:04:15,514 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,514 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-09 22:04:15,514 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,514 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-05-09 22:04:15,518 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: status_report
+2024-05-09 22:04:15,599 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 7
+2024-05-09 22:04:15,599 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:15,599 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-09 22:04:15,599 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:15,600 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-05-09 22:04:16,407 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_modified():288] file/dir modified: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/config.yaml
+2024-05-09 22:04:16,407 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_created():271] file/dir created: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/wandb-summary.json
+2024-05-09 22:04:16,434 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-09 22:04:17,437 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 8
+2024-05-09 22:04:17,437 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: poll_exit
+2024-05-09 22:04:17,437 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:17,437 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-09 22:04:17,438 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:17,438 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-05-09 22:04:17,438 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 9
+2024-05-09 22:04:17,439 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:17,439 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-09 22:04:17,439 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:17,439 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-05-09 22:04:17,439 INFO    SenderThread:1554229 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-09 22:04:18,408 INFO    Thread-12 :1554229 [dir_watcher.py:_on_file_modified():288] file/dir modified: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/output.log
+2024-05-09 22:04:18,409 INFO    SenderThread:1554229 [dir_watcher.py:finish():388] scan: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files
+2024-05-09 22:04:18,409 INFO    SenderThread:1554229 [dir_watcher.py:finish():402] scan save: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/wandb-metadata.json wandb-metadata.json
+2024-05-09 22:04:18,410 INFO    SenderThread:1554229 [dir_watcher.py:finish():402] scan save: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/config.yaml config.yaml
+2024-05-09 22:04:18,410 INFO    SenderThread:1554229 [dir_watcher.py:finish():402] scan save: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/requirements.txt requirements.txt
+2024-05-09 22:04:18,416 INFO    SenderThread:1554229 [dir_watcher.py:finish():402] scan save: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/wandb-summary.json wandb-summary.json
+2024-05-09 22:04:18,416 INFO    SenderThread:1554229 [dir_watcher.py:finish():402] scan save: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/output.log output.log
+2024-05-09 22:04:18,417 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 10
+2024-05-09 22:04:18,417 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:18,417 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-09 22:04:18,417 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:18,418 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-05-09 22:04:18,418 INFO    SenderThread:1554229 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-09 22:04:18,436 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-09 22:04:18,436 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: poll_exit
+2024-05-09 22:04:18,608 INFO    wandb-upload_0:1554229 [upload_job.py:push():131] Uploaded file /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/config.yaml
+2024-05-09 22:04:18,644 INFO    wandb-upload_1:1554229 [upload_job.py:push():131] Uploaded file /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/requirements.txt
+2024-05-09 22:04:18,660 INFO    wandb-upload_2:1554229 [upload_job.py:push():131] Uploaded file /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/wandb-summary.json
+2024-05-09 22:04:18,678 INFO    wandb-upload_3:1554229 [upload_job.py:push():131] Uploaded file /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/files/output.log
+2024-05-09 22:04:18,879 INFO    Thread-11 :1554229 [sender.py:transition_state():614] send defer: 11
+2024-05-09 22:04:18,879 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:18,879 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-09 22:04:18,880 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:18,880 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-05-09 22:04:18,880 INFO    SenderThread:1554229 [file_pusher.py:join():178] waiting for file pusher
+2024-05-09 22:04:18,880 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 12
+2024-05-09 22:04:18,880 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:18,880 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-09 22:04:18,881 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:18,881 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-05-09 22:04:18,881 INFO    SenderThread:1554229 [file_stream.py:finish():614] file stream finish called
+2024-05-09 22:04:18,945 INFO    SenderThread:1554229 [file_stream.py:finish():618] file stream finish is done
+2024-05-09 22:04:18,945 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 13
+2024-05-09 22:04:18,945 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:18,945 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-09 22:04:18,945 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:18,946 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-05-09 22:04:18,946 INFO    SenderThread:1554229 [sender.py:transition_state():614] send defer: 14
+2024-05-09 22:04:18,946 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: defer
+2024-05-09 22:04:18,946 INFO    HandlerThread:1554229 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-09 22:04:18,947 DEBUG   SenderThread:1554229 [sender.py:send():379] send: final
+2024-05-09 22:04:18,947 DEBUG   SenderThread:1554229 [sender.py:send():379] send: footer
+2024-05-09 22:04:18,947 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: defer
+2024-05-09 22:04:18,947 INFO    SenderThread:1554229 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-05-09 22:04:18,948 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-09 22:04:18,949 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: poll_exit
+2024-05-09 22:04:18,950 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-09 22:04:18,951 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: server_info
+2024-05-09 22:04:18,951 DEBUG   SenderThread:1554229 [sender.py:send_request():406] send_request: server_info
+2024-05-09 22:04:18,992 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-09 22:04:18,992 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-09 22:04:19,034 DEBUG   HandlerThread:1554229 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-09 22:04:19,034 INFO    HandlerThread:1554229 [handler.py:finish():866] shutting down handler
+2024-05-09 22:04:19,951 INFO    WriterThread:1554229 [datastore.py:close():296] close: /scratch/vb2386/Documents/nerf-pytorch/wandb/run-20240509_220404-xz5d5i13/run-xz5d5i13.wandb
+2024-05-09 22:04:19,993 INFO    SenderThread:1554229 [sender.py:finish():1546] shutting down sender
+2024-05-09 22:04:19,993 INFO    SenderThread:1554229 [file_pusher.py:finish():172] shutting down file pusher
+2024-05-09 22:04:19,993 INFO    SenderThread:1554229 [file_pusher.py:join():178] waiting for file pusher

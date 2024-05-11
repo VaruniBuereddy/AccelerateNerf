@@ -1,0 +1,61 @@
+
+Training STarted!!!!!!!!!!
+Loaded image data (378, 504, 3, 42) [378.         504.         421.41487125]
+Loaded ./data/nerf_llff_data/fortress 12.752075897929807 140.8233726873153
+recentered (3, 5)
+[[ 1.0000000e+00  8.8853841e-11  4.0031339e-10  7.8053706e-09]
+ [-8.8853841e-11  1.0000000e+00 -8.3621021e-09 -1.0643687e-08]
+ [-4.0031339e-10  8.3621021e-09  1.0000000e+00  4.6122643e-09]]
+Data:
+(42, 3, 5) (42, 378, 504, 3) (42, 2)
+HOLDOUT view is 21
+Loaded llff (42, 378, 504, 3) (120, 3, 5) [378.     504.     421.4149] ./data/nerf_llff_data/fortress
+Auto LLFF holdout, 8
+DEFINING BOUNDS
+NEAR FAR 0.0 1.0
+Found ckpts ['./logs/fortress_test/010000.tar', './logs/fortress_test/020000.tar', './logs/fortress_test/030000.tar', './logs/fortress_test/040000.tar', './logs/fortress_test/050000.tar']
+Reloading from ./logs/fortress_test/050000.tar
+get rays
+done, concats
+shuffle rays
+done
+Begin
+TRAIN views are [ 1  2  3  4  5  6  7  9 10 11 12 13 14 15 17 18 19 20 21 22 23 25 26 27
+ 28 29 30 31 33 34 35 36 37 38 39 41]
+TEST views are [ 0  8 16 24 32 40]
+VAL views are [ 0  8 16 24 32 40]
+/scratch/vb2386/Documents/nerf-pytorch/venv/lib/python3.8/site-packages/torch/functional.py:507: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3549.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Saved checkpoints at ./logs/fortress_test/050000.tar
+0 0.00012159347534179688
+torch.Size([378, 504, 3]) torch.Size([378, 504])
+1 9.2064688205719
+2 9.205630540847778
+
+3 9.201978921890259
+4 9.199241161346436
+5 9.203698635101318
+6 9.20669150352478
+7 9.212943315505981
+
+8 9.214125394821167
+9 9.224241495132446
+10 9.253283262252808
+11 9.260641098022461
+[34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
+Traceback (most recent call last):
+  File "profile_nerf.py", line 552, in run
+    train(args)
+  File "profile_nerf.py", line 826, in train
+    rgbs, disps = render_path(render_poses, hwf, K, args.chunk, render_kwargs_test)
+  File "profile_nerf.py", line 155, in render_path
+    rgb, disp, acc, _ = render(H, W, K, chunk=chunk, c2w=c2w[:3,:4], **render_kwargs)
+  File "profile_nerf.py", line 127, in render
+    all_ret = batchify_rays(rays, chunk, **kwargs)
+  File "profile_nerf.py", line 60, in batchify_rays
+    ret = render_rays(rays_flat[i:i+chunk], **kwargs)
+  File "profile_nerf.py", line 387, in render_rays
+    rgb_map, disp_map, acc_map, weights, depth_map = raw2outputs(raw, z_vals, rays_d, raw_noise_std, white_bkgd, pytest=pytest)
+  File "profile_nerf.py", line 279, in raw2outputs
+    dists = torch.cat([dists, torch.Tensor([1e10]).expand(dists[...,:1].shape)], -1)  # [N_rays, N_samples]
+Exception
