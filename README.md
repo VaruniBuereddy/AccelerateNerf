@@ -19,8 +19,7 @@ The primary objective of this project is to delve into the Neural Graphics Primi
 
 ## Dataset
 
-We use [The New Yorker Caption Contest](https://huggingface.co/datasets/jmhessel/newyorker_caption_contest) dataset.
-Refer to [the documentation](https://huggingface.co/datasets/jmhessel/newyorker_caption_contest) for more details.
+We have used nerf_synthetic and LLff dataset which can be downloaded from [here](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1) .
 
 ## Fine-tuning
 
