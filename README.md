@@ -51,9 +51,12 @@ Dataset | NeRF | NGP
 
 ### Performance Profiling:
 To quantify the computational efficiency and memory usage of Nerf-pytorch and Instant NGP, we conducted performance profiling experiments. These experiments provide insights into the models' scalability and resource requirements, crucial for practical deployment scenarios.
+
+<div align="center">
+    
 <img width="350" src="Images/tensorboard.png"/>
 
-
+</div>
 
 ### Lego trained weights
 
