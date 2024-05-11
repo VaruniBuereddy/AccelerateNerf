@@ -21,75 +21,33 @@ The primary objective of this project is to delve into the Neural Graphics Primi
 
 We have used nerf_synthetic and LLff dataset which can be downloaded from [here](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1) .
 
-## Fine-tuning
-
-A Stable Diffusion model can be decomposed into several key components:
-
-- A text encoder that projects the input prompt to a latent space. (The caption associated with an image is referred to as the "prompt".)
-- A variational autoencoder (VAE) that projects an input image to a latent space acting as an image vector space.
-- A diffusion model that refines a latent vector and produces another latent vector, conditioned on the encoded text prompt.
-- A decoder that generates images given a latent vector from the diffusion model.
-
-During the process of generating an image from a text prompt, the image encoder is not typically employed.
-
-However, during the process of fine-tuning, the workflow goes like the following:
-
-1. An input text prompt is projected to a latent space by the text encoder.
-2. An input image is projected to a latent space by the image encoder portion of the VAE.
-3. A small amount of noise is added to the image latent vector for a given timestep.
-4. The diffusion model uses latent vectors from these two spaces along with a timestep embedding to predict the noise that was added to the image latent.
-5. A reconstruction loss is calculated between the predicted noise and the original noise added in step 3.
-6. Finally, the diffusion model parameters are optimized w.r.t this loss using gradient descent.
-
-Note that only the diffusion model parameters are updated during fine-tuning, while the (pre-trained) text and the image encoders are kept frozen.
-
-### Fine-tuned weights
-
-You can find the fine-tuned diffusion model weights [here](./checkpoints/README.md)
-
-## Training
-
-Fine-tuning code is provided in `finetune.py`. Before running training, ensure you have the dependencies (refer to `requirements.txt`) installed. See **Usage** for more details.
-
-When you launch training, a diffusion model checkpoint will be generated epoch-wise only if the current loss is lower
-than the previous one.
-
-For avoiding OOM and faster training, it's recommended to use a V100 GPU at least.
-
-**Note**: For the scope of the project, only the diffusion model is fine-tuned. The VAE and the text encoder are kept frozen.
-
-## Inference
-
-You can bring in your weights or load the fine-tined model weights and reuse the code snippet below to generate some images.
-
-```python
-import keras_cv
-import matplotlib.pyplot as plt
-from tensorflow import keras
-
-IMG_HEIGHT = IMG_WIDTH = 512
+## Project milestones
 
 
-def plot_images(images, title):
-    plt.figure(figsize=(20, 20))
-    for i in range(len(images)):
-        ax = plt.subplot(1, len(images), i + 1)
-        plt.title(title)
-        plt.imshow(images[i])
-        plt.axis("off")
+### Dataset Preparation:
 
+We preprocessed the Nerf-Synthetic and LLFF datasets, ensuring compatibility with both Nerf-pytorch and Instant NGP frameworks. These datasets contain diverse scenes with varying levels of complexity, allowing us to evaluate the models' performance across different scenarios.
 
-# We just have to load the fine-tuned weights into the diffusion model.
-weights_path = keras.utils.get_file(origin="<link-to-the-model-here>")
-fine_tuned = keras_cv.models.StableDiffusion(
-    img_height=IMG_HEIGHT, img_width=IMG_WIDTH
-)
-fine_tuned.diffusion_model.load_weights(weights_path)
+### Training and Evaluation:
+We trained both Nerf-pytorch and Instant NGP on the prepared datasets, employing standard training protocols and hyperparameters. Subsequently, we conducted thorough evaluations, including visualizations, performance profiling, and result interpretation.
 
-# Generate images.
-generated_images = fine_tuned.text_to_image("A man is sitting in an office on his computer. He's speaking with a rat man, who is at his computer", batch_size=3)
-plot_images(generated_images, "Fine-tuned on The New Yorker Caption Contest Dataset")
-```
+### Visualizations:
+We generated qualitative visualizations of the reconstructed scenes from both models to assess the quality of the reconstructions. Visual inspection allows for a comparative analysis of the models' ability to capture fine details and reproduce scene geometry accurately.
+
+### Performance Profiling:
+To quantify the computational efficiency and memory usage of Nerf-pytorch and Instant NGP, we conducted performance profiling experiments. These experiments provide insights into the models' scalability and resource requirements, crucial for practical deployment scenarios.
+
+### Interpretation of Results:
+Based on the evaluation results, we analyzed the strengths and weaknesses of Nerf-pytorch and Instant NGP. We considered factors such as reconstruction quality, computational efficiency, and memory footprint to determine the suitability of each model for different application scenarios.
+
+### Inference:
+We performed inference experiments using both models to assess their real-time performance and scalability. This evaluation is essential for applications requiring interactive rendering or deployment on resource-constrained devices.
+
+### Lego trained weights
+
+You can find the pre trained models for lego dataset inside results folder for each implementation as `model.pt` .
+**Note**: For the scope of the project, only relevant hyperparameters are selected for sweeping.
+
 
 ## Results
 
@@ -110,51 +68,83 @@ Prompt (Image Captions) | Stable Diffusion | Stable Diffusion (Fine-Tuned) | Ori
 
 | File/Directory | Description |
 |----------------|-------------|
-| `art` | Images/artwork |
-| `checkpoints` | Fine-tuned model checkpoints |
+| `Images` | Images/artwork |
+| `Results` | Results with model checkpoints |
 | `notebooks` | Interactive notebooks for training and inference |
-| `outputs` | Generated images for different fine-tuned model |
+| `torch-ngp` | NGP training setup and scripts |
 | `scripts` | SLURM batch files |
-| `dataset.py` | Helper class to load and preprocess the dataset |
-| `finetune.py` | Entry point for fine-tuning stable diffusion model |
-| `trainer.py` | Procedure for training the diffusion model |
+| `taichi-nerf` | taichi training setup and scripts |
+| `nerf_pytorch` | NeRF training setup and scripts |
+
 
 
 ## Usage
 
-**Note: It's highly recommended that you use a GPU with at least 30GB of memory to execute the code.**
+**Note: It's highly recommended that you use a GPU.**
 
 1. Clone the repository
     ```bash
-    git clone git@github.com:utsavoza/mosaic.git
+    git clone https://github.com/VaruniBuereddy/AccelerateNerf.git
     ```
-2. Setup and activate the virtual environment
+  ### NGP  
+1. Setup and activate the virtual environment
     ```bash
-    python3 -m venv .
-    source ./bin/activate
+    cd torch-ngp
+    source venv/bin/activate
     ```
-3. Install the required dependencies
+2. Install the required dependencies
     ```bash
     pip install -r requirements.txt
     ```
-4. Fine-tuning the stable diffusion model
+3. Run the training with profiling 
     ```bash
-    python finetune.py --mp --num_epochs=80
+    python profile_ngp -- 
     ```
+    ### NeRf
+1. Setup and activate the virtual envirnoment
+```
 
-Alternatively, the model can also be finetuned by running the example notebooks on a GPU enabled machine or by
-scheduling a batch job on an HPC cluster using `sbatch scripts/finetune.sbatch`.
+```
+2. Run he training with profiling
+```
+```
+ ### Taichi
+Alternatively, the taichi model can also be trianed  by
+scheduling a batch job on an HPC cluster using `sbatch scripts/taichi_NGP.sbatch`.
 
 ## References
-
-The code and techniques used in this project are adapted from these excellent guides on [Textual Inversion](https://keras.io/examples/generative/fine_tune_via_textual_inversion/) and [Fine-Tuning
-Stable Diffusion models](https://keras.io/examples/generative/finetune_stable_diffusion/), with neccesary changes made to achieve the goal of the project.
+```
+@article{mueller2022instant,
+    author = {Thomas M\"uller and Alex Evans and Christoph Schied and Alexander Keller},
+    title = {Instant Neural Graphics Primitives with a Multiresolution Hash Encoding},
+    journal = {ACM Trans. Graph.},
+    issue_date = {July 2022},
+    volume = {41},
+    number = {4},
+    month = jul,
+    year = {2022},
+    pages = {102:1--102:15},
+    articleno = {102},
+    numpages = {15},
+    url = {https://doi.org/10.1145/3528223.3530127},
+    doi = {10.1145/3528223.3530127},
+    publisher = {ACM},
+    address = {New York, NY, USA},
+}
+```
+```
+@misc{torch-ngp,
+    Author = {Jiaxiang Tang},
+    Year = {2022},
+    Note = {https://github.com/ashawkey/torch-ngp},
+    Title = {Torch-ngp: a PyTorch implementation of instant-ngp}
+}
+```
 
 ## Authors
 
-- Mehul Sudrik (ms14029)
+- Varuni Buereddy (vb2386)
 - Rajesh Nagula (rgn5646)
-- Utsav Oza (ugo1)
 
 ## License
 
