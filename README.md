@@ -66,7 +66,17 @@ You can find the pre trained models for lego dataset inside results folder for e
 
 ### Additional Results
 
+<div align="left">
+    
+<img width="500" src="Images/depth.png"/>
 
+</div>
+
+<div align="right">
+    
+<img width="500" src="Images/lego_taichi.png"/>
+
+</div>
 
 ## Inference:
 
@@ -93,7 +103,7 @@ You can find the pre trained models for lego dataset inside results folder for e
     ```bash
     git clone https://github.com/VaruniBuereddy/AccelerateNerf.git
     ```
-  ### NGP  
+### NGP  
 1. Setup and activate the virtual environment
     ```bash
     cd torch-ngp
@@ -107,12 +117,12 @@ You can find the pre trained models for lego dataset inside results folder for e
     ```bash
     python profile_ngp -- 
     ```
-    ### NeRf
+### NeRF
 1. Run he training with profiling
 ```
 python profile_nerf -- 
 ```
- ### Taichi
+### Taichi
 Alternatively, the taichi model can also be trianed  by
 scheduling a batch job on an HPC cluster using `sbatch scripts/taichi_NGP.sh`.
 
