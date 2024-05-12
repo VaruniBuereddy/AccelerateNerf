@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Inthe exploration of the 3D modeling domain and the metaverse, there is a growing emphasis on replicating our world with a high degree of realism. In addition, some things become clearer when we see them in 3D. It’s like gaining a different viewpoint that helps us understand stuff in a new way.
+In the exploration of the 3D modeling domain and the metaverse, there is a growing emphasis on replicating our world with a high degree of realism. In addition, some things become clearer when we see them in 3D. It’s like gaining a different viewpoint that helps us understand stuff in a new way.
 The approach to digitizing real-world objects involves the application of Neural Radiance Fields (NeRFs).
 
 The primary objective of this project is to delve into the Neural Graphics Primitives (NGP) optimization technique and other strategies to facilitate real-time performance in the Neural Radiance Field (NeRF). We aim to comprehensively understand the impact of NGP and alternative optimization methods on the training and runtime efficiency of NeRF.
