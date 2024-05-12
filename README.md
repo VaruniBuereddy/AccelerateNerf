@@ -37,6 +37,11 @@ python ./torch-ngp/scripts/llff2nerf.py
 You use this to convert the intrinsic data format (used by LLFF dataset) to JSON format used by most nerf models (also nerf_synthetic format).
 ### Training and Evaluation:
 We trained both Nerf-pytorch and Instant NGP on the prepared datasets, employing standard training protocols and hyperparameters. Subsequently, we conducted thorough evaluations, including visualizations, performance profiling, and result interpretation.
+`python ./nerf-pytorch/profile_nerf.py` or `python ./torch-ngp/profile_ngp.py` can be used for profiling and training (with or without WandB)
+
+Alternatively, `notebooks/Hyperparameter_Optimization_on_a_NeRF.ipynb` can be used to train or hyperparameter tuning for interactive training.
+
+The project sweep can be found below:
 
 The WandB page for NeRF is available [here](https://wandb.ai/vb2386/Sweep_Nerf?nw=nwuservb2386)
 The WandB page for NGP is available [here](https://wandb.ai/vb2386/Sweep_NGP?nw=nwuservb2386)
