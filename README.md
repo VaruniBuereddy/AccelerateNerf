@@ -118,7 +118,7 @@ You can find the pre trained models for lego dataset inside results folder for e
     ```
 3. Run the training with profiling 
     ```bash
-    python torch-ngp/profile_ngp.py 'path-to-dataset'  --workspace output-path -O --bound 1.0 --scale 0.8 --dt_gamma 0
+    python profile_ngp.py 'path-to-dataset'  --workspace output-path -O --bound 1.0 --scale 0.8 --dt_gamma 0
     ```
 ### NeRF
 1. Run the training with profiling
