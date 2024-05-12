@@ -118,18 +118,18 @@ You can find the pre trained models for lego dataset inside results folder for e
     ```
 3. Run the training with profiling 
     ```bash
-    python profile_ngp -- 
+    python torch-ngp/profile_ngp.py 'path-to-dataset'  --workspace output-path -O --bound 1.0 --scale 0.8 --dt_gamma 0
     ```
 ### NeRF
-1. Run he training with profiling
+1. Run the training with profiling
 ```
-python profile_nerf -- 
+python profile_nerf.py --config configs/lego.txt
 ```
 ### Taichi
-Alternatively, the taichi model can also be trianed  by
+Alternatively, the taichi model can also be trained  by
 scheduling a batch job on an HPC cluster using `sbatch scripts/taichi_NGP.sh`.
 
-**Note: This is recommended to be done on hpc as it is GPU extensive and similar to running CUDA kernels.**
+**Note: This is recommended to be done on HPC as it is GPU extensive and similar to running CUDA kernels.**
 
 ## References
 ```
