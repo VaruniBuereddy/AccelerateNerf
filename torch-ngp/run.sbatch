@@ -5,7 +5,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --time=50:00:00
 #SBATCH --mem=150GB
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:rtx8000
 #SBATCH --job-name=ngp
 #SBATCH --output=ngp.out
 
