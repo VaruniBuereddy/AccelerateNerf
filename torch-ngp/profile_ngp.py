@@ -2,7 +2,7 @@ import torch
 import argparse
 
 import wandb
-wandb.login(key='7e83c2afdb7fe3d906f07a5f1f1c077bdfaf919a')
+wandb.login()
 
 from nerf.provider import NeRFDataset
 from nerf.gui import NeRFGUI
